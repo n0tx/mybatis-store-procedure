@@ -34,4 +34,19 @@ public class UserController {
         return new ResponseEntity<>(userService.getUserById(id), HttpStatus.OK);
     }
 
+    // Memperbarui data pengguna
+    @PutMapping("/{id}")
+    public ResponseEntity<String> updateUser(@PathVariable int id, @RequestBody User user) {
+        user.setId(id);
+        userService.updateUser(user);
+        return ResponseEntity.ok("User berhasil diperbarui");
+    }
+
+    // Menghapus pengguna
+    @DeleteMapping("/{id}")
+    public ResponseEntity<String> deleteUser(@PathVariable int id) {
+        userService.deleteUser(id);
+        return ResponseEntity.ok("User berhasil dihapus");
+    }
+
 }

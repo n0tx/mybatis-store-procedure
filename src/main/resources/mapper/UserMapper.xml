@@ -21,4 +21,15 @@
     <select id="getUserById" parameterType="int" resultType="com.riki.mybatis.model.User">
         CALL getUserById(#{id})
     </select>
+
+    <!-- Update User using Stored Procedure -->
+    <update id="updateUser" parameterType="com.riki.mybatis.model.User">
+        CALL updateUser(#{id}, #{username}, #{email})
+    </update>
+
+    <!-- Delete User by ID using Stored Procedure -->
+    <delete id="deleteUser" parameterType="com.riki.mybatis.model.User">
+        CALL deleteUser(#{id})
+    </delete>
+
 </mapper>
