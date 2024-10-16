@@ -20,4 +20,8 @@ public class UserService {
     public List<User> getAllUsers() {
         return userMapper.getAllUsers();
     }
+
+    public User getUserById(int id) {
+        return userMapper.getUserById(id);
+    }
 }

@@ -17,4 +17,8 @@
     </select>
 
 
+    <!-- Get User by ID using Stored Procedure -->
+    <select id="getUserById" parameterType="int" resultType="com.riki.mybatis.model.User">
+        CALL getUserById(#{id})
+    </select>
 </mapper>

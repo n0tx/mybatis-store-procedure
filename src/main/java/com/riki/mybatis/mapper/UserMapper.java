@@ -10,4 +10,6 @@ public interface UserMapper {
     void insertUser(User user);
 
     List<User> getAllUsers();
+
+    User getUserById(int id);
 }
