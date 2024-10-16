@@ -10,4 +10,11 @@
         CALL insertUser(#{username}, #{email})
     </insert>
 
+
+    <!-- Get All Users using Stored Procedure -->
+    <select id="getAllUsers" resultType="com.riki.mybatis.model.User">
+        CALL getAllUsers
+    </select>
+
+
 </mapper>
